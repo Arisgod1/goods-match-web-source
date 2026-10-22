@@ -6,6 +6,8 @@ Cocos Creator **3.8.3** 货柜三消游戏的独立 Web 源码工程。运行时
 
 <img src="docs/evidence/step-08/03-level.png" alt="货柜消除大师关卡界面" width="320">
 
+**在线试玩**：https://arisgod1.github.io/goods-match-web-source/
+
 ## 这个工程是什么
 
 这个仓库不是 Creator 工程，也不是压缩后的 Web 构建包，而是一个可以直接阅读、修改和静态部署的 Web Source：
@@ -254,6 +256,14 @@ Cocos 仍会请求 `assets/main/index.js`，它只是兼容占位脚本；业务
 | 存档丢失 | 检查端口/域名/隐私模式；确认键仍是 `hgxcds_game_v1` |
 | 音频没声音 | 先点击页面产生用户手势；浏览器自动播放策略限制 |
 | `cocos-source.json` 缺失 | 不影响运行；复制 `cocos-source.example.json` 填写本机路径即可 |
+
+
+## GitHub Pages 发布
+
+本仓库沿用原项目 `goods-match` 的发布方式：`main` 分支根目录 + `.nojekyll`，GitHub Pages legacy 构建。推送 `main` 后自动发布根目录静态文件；不需要 GitHub Actions，也不需要 GitHub 运行 Creator。
+
+- 在线地址：https://arisgod1.github.io/goods-match-web-source/
+- 源码、文档和验收证据保留在同一仓库，便于训练和二次创作。
 
 ## 文档
 
