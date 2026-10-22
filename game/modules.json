@@ -1,0 +1,952 @@
+[
+    {
+        "id": "chunks:///_virtual/ArrayUtil.ts",
+        "file": "game/modules/ArrayUtil.js",
+        "source": "game/source/util/ArrayUtil.ts",
+        "className": "ArrayUtil",
+        "componentUuid": "4ec22SiSCtIH5tIfhLB1ntc",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/AudioMgr.ts",
+        "file": "game/modules/AudioMgr.js",
+        "source": "game/source/manager/AudioMgr.ts",
+        "className": "AudioMgr",
+        "componentUuid": "79432KzY8JGh7M/c0pay+I1",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/BoardLayout.ts",
+        "file": "game/modules/BoardLayout.js",
+        "source": "game/source/game/BoardLayout.ts",
+        "className": "BoardLayout",
+        "componentUuid": "9dbeaZIJelOvqqzCxidFVcN",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/Breath.ts",
+        "file": "game/modules/Breath.js",
+        "source": "game/source/misc/Breath.ts",
+        "className": "Breath",
+        "componentUuid": "9d4c9kNag1CYLOnxCSHLbtq",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/BtnExtend.ts",
+        "file": "game/modules/BtnExtend.js",
+        "source": "game/source/uiExtend/BtnExtend.ts",
+        "className": "BtnExtend",
+        "componentUuid": "e858boYmuRNtaUbAZS8rSGo",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/Bundle.ts",
+        "file": "game/modules/Bundle.js",
+        "source": "game/source/enum/Bundle.ts",
+        "className": "Bundle",
+        "componentUuid": "105baVpUGlOC7EYBCfoZ7kt",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/cfg_icon.ts",
+        "file": "game/modules/cfg_icon.js",
+        "source": "game/source/config/cfg_icon.ts",
+        "className": "cfg_icon",
+        "componentUuid": "032eaaUB05H+6HPhAqADpKu",
+        "bundle": "",
+        "readability": "source",
+        "notes": "数据适配模块，运行时数据在 data/tables/"
+    },
+    {
+        "id": "chunks:///_virtual/cfg_level.ts",
+        "file": "game/modules/cfg_level.js",
+        "source": "game/source/config/cfg_level.ts",
+        "className": "cfg_level",
+        "componentUuid": "589e3TdcuNGWZgjWDycD6B7",
+        "bundle": "",
+        "readability": "source",
+        "notes": "数据适配模块，运行时数据在 data/tables/"
+    },
+    {
+        "id": "chunks:///_virtual/cfg_passReward.ts",
+        "file": "game/modules/cfg_passReward.js",
+        "source": "game/source/config/cfg_passReward.ts",
+        "className": "cfg_passReward",
+        "componentUuid": "d2576gg+39CgpNSYy24NLn8",
+        "bundle": "",
+        "readability": "source",
+        "notes": "数据适配模块，运行时数据在 data/tables/"
+    },
+    {
+        "id": "chunks:///_virtual/CfgCombo.ts",
+        "file": "game/modules/CfgCombo.js",
+        "source": "game/source/config/CfgCombo.ts",
+        "className": "CfgCombo",
+        "componentUuid": "060b37UrIZGjLWVUacodUnI",
+        "bundle": "",
+        "readability": "source",
+        "notes": "数据适配模块，运行时数据在 data/tables/"
+    },
+    {
+        "id": "chunks:///_virtual/CfgItem.ts",
+        "file": "game/modules/CfgItem.js",
+        "source": "game/source/config/CfgItem.ts",
+        "className": "CfgItem",
+        "componentUuid": "2ef25I11RRIUrJ+H0hYm0Ro",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/CfgLoginReward.ts",
+        "file": "game/modules/CfgLoginReward.js",
+        "source": "game/source/config/CfgLoginReward.ts",
+        "className": "CfgLoginReward",
+        "componentUuid": "a7a37hutLVCuY7vo6dP1uSM",
+        "bundle": "",
+        "readability": "source",
+        "notes": "数据适配模块，运行时数据在 data/tables/"
+    },
+    {
+        "id": "chunks:///_virtual/CfgLuckySpin.ts",
+        "file": "game/modules/CfgLuckySpin.js",
+        "source": "game/source/config/CfgLuckySpin.ts",
+        "className": "CfgLuckySpin",
+        "componentUuid": "ed4fct49zJCbqBkrPRyAKAX",
+        "bundle": "",
+        "readability": "source",
+        "notes": "数据适配模块，运行时数据在 data/tables/"
+    },
+    {
+        "id": "chunks:///_virtual/CfgSkillInfo.ts",
+        "file": "game/modules/CfgSkillInfo.js",
+        "source": "game/source/config/CfgSkillInfo.ts",
+        "className": "CfgSkillInfo",
+        "componentUuid": "25e99peI09FgoTilgJMTZp7",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/CoinItem.ts",
+        "file": "game/modules/CoinItem.js",
+        "source": "game/source/uiItem/CoinItem.ts",
+        "className": "CoinItem",
+        "componentUuid": "c3b43fuycJEPLI1Et7usH3D",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/CoinMgr.ts",
+        "file": "game/modules/CoinMgr.js",
+        "source": "game/source/manager/CoinMgr.ts",
+        "className": "CoinMgr",
+        "componentUuid": "dad9e++GnNNAq62LJJad40y",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/ComboBox.ts",
+        "file": "game/modules/ComboBox.js",
+        "source": "game/source/game/ComboBox.ts",
+        "className": "ComboBox",
+        "componentUuid": "75d5bkvGiFM3oYCJK1pcaui",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/ComboMgr.ts",
+        "file": "game/modules/ComboMgr.js",
+        "source": "game/source/manager/ComboMgr.ts",
+        "className": "ComboMgr",
+        "componentUuid": "7e33dktx3hEJZh58S/WeMXj",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/CommonShelve.ts",
+        "file": "game/modules/CommonShelve.js",
+        "source": "game/source/game/CommonShelve.ts",
+        "className": "CommonShelve",
+        "componentUuid": "a681aMn/NVED75E5Qcqy+AM",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/CustomComponent.ts",
+        "file": "game/modules/CustomComponent.js",
+        "source": "game/source/custom_engine/CustomComponent.ts",
+        "className": "CustomComponent",
+        "componentUuid": "7ae38OhjMRHuoq4SZegyA3K",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/CustomNode.ts",
+        "file": "game/modules/CustomNode.js",
+        "source": "game/source/custom_engine/CustomNode.ts",
+        "className": "CustomNode",
+        "componentUuid": "459b6g6Dx1Jl6l5jtUn6El1",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/CustomSprite.ts",
+        "file": "game/modules/CustomSprite.js",
+        "source": "game/source/custom_engine/CustomSprite.ts",
+        "className": "CustomSprite",
+        "componentUuid": "13bb9TshclOBrsQ2KwyYVbo",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/debug-view-runtime-control.ts",
+        "file": "game/modules/debug-view-runtime-control.js",
+        "source": "",
+        "className": "debug-view-runtime-control",
+        "componentUuid": "b2bd1+njXxJxaFY3ymm06WU",
+        "bundle": "",
+        "readability": "generated",
+        "notes": "Cocos 调试视图运行时模块；无原始 TS 对应文件"
+    },
+    {
+        "id": "chunks:///_virtual/Debug.ts",
+        "file": "game/modules/Debug.js",
+        "source": "game/source/util/Debug.ts",
+        "className": "Debug",
+        "componentUuid": "24152lr7B5ApJuM1SRUJV/V",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/DtoIconCfg.ts",
+        "file": "game/modules/DtoIconCfg.js",
+        "source": "game/source/dto/DtoIconCfg.ts",
+        "className": "DtoIconCfg",
+        "componentUuid": "653c59U1OJLW6iZPU6MlFj6",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/DtoIconData.ts",
+        "file": "game/modules/DtoIconData.js",
+        "source": "game/source/dto/DtoIconData.ts",
+        "className": "DtoIconData",
+        "componentUuid": "f65592eRapGr7LbjHBnpASv",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/DtoItem.ts",
+        "file": "game/modules/DtoItem.js",
+        "source": "game/source/dto/DtoItem.ts",
+        "className": "DtoItem",
+        "componentUuid": "bb0abRdj4JHJ5cBJHqC60Pg",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/DtoLevelCfg.ts",
+        "file": "game/modules/DtoLevelCfg.js",
+        "source": "game/source/dto/DtoLevelCfg.ts",
+        "className": "DtoLevelCfg",
+        "componentUuid": "0f4bdwzf71MN4qMqBDPCF95",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/DtoLevelData.ts",
+        "file": "game/modules/DtoLevelData.js",
+        "source": "game/source/dto/DtoLevelData.ts",
+        "className": "DtoLevelData",
+        "componentUuid": "f9945j9F5lO9o1YtpeS08F7",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/DtoPassReward.ts",
+        "file": "game/modules/DtoPassReward.js",
+        "source": "game/source/dto/DtoPassReward.ts",
+        "className": "DtoPassReward",
+        "componentUuid": "93fb6FVmrxD4amnZOdFWZ9V",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/DtoReward.ts",
+        "file": "game/modules/DtoReward.js",
+        "source": "game/source/dto/DtoReward.ts",
+        "className": "DtoReward",
+        "componentUuid": "858f0EjULFKeZbkcqeyYP2/",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/DtoUI.ts",
+        "file": "game/modules/DtoUI.js",
+        "source": "game/source/dto/DtoUI.ts",
+        "className": "DtoUI",
+        "componentUuid": "865caVG9sJJx43oQLndbIh/",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/EffectFreeze.ts",
+        "file": "game/modules/EffectFreeze.js",
+        "source": "game/source/game/EffectFreeze.ts",
+        "className": "EffectFreeze",
+        "componentUuid": "9e7aexhG2pDCacTPHtgSOhx",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/EffectMgr.ts",
+        "file": "game/modules/EffectMgr.js",
+        "source": "game/source/manager/EffectMgr.ts",
+        "className": "EffectMgr",
+        "componentUuid": "99a40aze3xOO67617VY8NcF",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/EffectRedAlert.ts",
+        "file": "game/modules/EffectRedAlert.js",
+        "source": "game/source/game/EffectRedAlert.ts",
+        "className": "EffectRedAlert",
+        "componentUuid": "b7f21+tVI1AOoD8l7luTPtj",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/EventMgr.ts",
+        "file": "game/modules/EventMgr.js",
+        "source": "game/source/manager/EventMgr.ts",
+        "className": "EventMgr",
+        "componentUuid": "9a7eeGxAlpJtL+cEC8eYEST",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/EventType.ts",
+        "file": "game/modules/EventType.js",
+        "source": "game/source/enum/EventType.ts",
+        "className": "EventType",
+        "componentUuid": "c7fa9QGmtBBIYbVwCza1OPL",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/Floaty.ts",
+        "file": "game/modules/Floaty.js",
+        "source": "game/source/misc/Floaty.ts",
+        "className": "Floaty",
+        "componentUuid": "eaa9aoMVFhCBY75R+3rE22h",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/GameMgr.ts",
+        "file": "game/modules/GameMgr.js",
+        "source": "game/source/manager/GameMgr.ts",
+        "className": "GameMgr",
+        "componentUuid": "fc7ab3uDQZMAr967dLrCODL",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/GameSave.ts",
+        "file": "game/modules/GameSave.js",
+        "source": "game/source/manager/GameSave.ts",
+        "className": "GameSave",
+        "componentUuid": "e8276cE4S9Hg4dt+KdeZgcN",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/GameUtil.ts",
+        "file": "game/modules/GameUtil.js",
+        "source": "game/source/util/GameUtil.ts",
+        "className": "GameUtil",
+        "componentUuid": "b956eqLejpFnJDRlZtO5TSN",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/Global.ts",
+        "file": "game/modules/Global.js",
+        "source": "game/source/Global.ts",
+        "className": "Global",
+        "componentUuid": "8b9a7NpOe9NkL6FuWN5ugvn",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/Goods.ts",
+        "file": "game/modules/Goods.js",
+        "source": "game/source/game/Goods.ts",
+        "className": "Goods",
+        "componentUuid": "11c98MJgY1AT7pHyH/0IZ9r",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/GoodsLayout.ts",
+        "file": "game/modules/GoodsLayout.js",
+        "source": "game/source/game/GoodsLayout.ts",
+        "className": "GoodsLayout",
+        "componentUuid": "4bc68I7UmZAv6HiiVXcJyRL",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/InputBlock.ts",
+        "file": "game/modules/InputBlock.js",
+        "source": "game/source/misc/InputBlock.ts",
+        "className": "InputBlock",
+        "componentUuid": "9b7dfe7eXxHR4G7BQOM8lL3",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/ItemMgr.ts",
+        "file": "game/modules/ItemMgr.js",
+        "source": "game/source/manager/ItemMgr.ts",
+        "className": "ItemMgr",
+        "componentUuid": "8a5f49UPdhHBq9JLMhh6us4",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/ItemType.ts",
+        "file": "game/modules/ItemType.js",
+        "source": "game/source/enum/ItemType.ts",
+        "className": "ItemType",
+        "componentUuid": "41e94mhPxZNyIeHSVzn2TyK",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/LabelTick.ts",
+        "file": "game/modules/LabelTick.js",
+        "source": "game/source/uiExtend/LabelTick.ts",
+        "className": "LabelTick",
+        "componentUuid": "51142RfrX9DBphTxuZVxIcR",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/main",
+        "file": "game/modules/main",
+        "source": "",
+        "className": "main",
+        "componentUuid": "",
+        "bundle": "",
+        "readability": "generated",
+        "notes": "SystemJS 虚拟入口；由 prerequisite.js 注册"
+    },
+    {
+        "id": "chunks:///_virtual/Main.ts",
+        "file": "game/modules/Main.js",
+        "source": "game/source/Main.ts",
+        "className": "Main",
+        "componentUuid": "92bdbvKAAdD+ZRAMRSW3Jtb",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/MainItem.ts",
+        "file": "game/modules/MainItem.js",
+        "source": "game/source/uiItem/MainItem.ts",
+        "className": "MainItem",
+        "componentUuid": "c23355pf51HnrCLBl2fKRjQ",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/MathUtil.ts",
+        "file": "game/modules/MathUtil.js",
+        "source": "game/source/util/MathUtil.ts",
+        "className": "MathUtil",
+        "componentUuid": "c0d0eKNUodPMpvHFwYAailX",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/Mode.ts",
+        "file": "game/modules/Mode.js",
+        "source": "game/source/enum/Mode.ts",
+        "className": "Mode",
+        "componentUuid": "51e1axOM+VCwrP9FDuFyide",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/ObjUtil.ts",
+        "file": "game/modules/ObjUtil.js",
+        "source": "game/source/util/ObjUtil.ts",
+        "className": "ObjUtil",
+        "componentUuid": "f8d2eYTnyVHsraF02+wD5vV",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/PassRewardItem.ts",
+        "file": "game/modules/PassRewardItem.js",
+        "source": "game/source/uiItem/PassRewardItem.ts",
+        "className": "PassRewardItem",
+        "componentUuid": "9dcc4Z2wSFM/LXwf99wJrU6",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/RecoveryMgr.ts",
+        "file": "game/modules/RecoveryMgr.js",
+        "source": "game/source/manager/RecoveryMgr.ts",
+        "className": "RecoveryMgr",
+        "componentUuid": "78b3bfzHvVJpo8cicf+bJeK",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/ResMgr.ts",
+        "file": "game/modules/ResMgr.js",
+        "source": "game/source/manager/ResMgr.ts",
+        "className": "ResMgr",
+        "componentUuid": "18c3dVw309B54avl/M3OpJz",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/RewardMgr.ts",
+        "file": "game/modules/RewardMgr.js",
+        "source": "game/source/manager/RewardMgr.ts",
+        "className": "RewardMgr",
+        "componentUuid": "e9b11WOJXRM353UWyH5IdTr",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/Rotate.ts",
+        "file": "game/modules/Rotate.js",
+        "source": "game/source/misc/Rotate.ts",
+        "className": "Rotate",
+        "componentUuid": "6b9acTOKxRPKb2/9uu/YoaF",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/Setting.ts",
+        "file": "game/modules/Setting.js",
+        "source": "game/source/Setting.ts",
+        "className": "Setting",
+        "componentUuid": "0e05aoaPd5CY4kLpLQPu/rr",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/Shake.ts",
+        "file": "game/modules/Shake.js",
+        "source": "game/source/misc/Shake.ts",
+        "className": "Shake",
+        "componentUuid": "2840flXNXFIw61GRpqk0Yl7",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/ShelveBase.ts",
+        "file": "game/modules/ShelveBase.js",
+        "source": "game/source/scriptBase/ShelveBase.ts",
+        "className": "ShelveBase",
+        "componentUuid": "04238mGxFJID6A6C9vG2iZQ",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/ShelveLocker.ts",
+        "file": "game/modules/ShelveLocker.js",
+        "source": "game/source/game/ShelveLocker.ts",
+        "className": "ShelveLocker",
+        "componentUuid": "2b95fT+AlBNDITnn29g4dF4",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/ShelveType.ts",
+        "file": "game/modules/ShelveType.js",
+        "source": "game/source/enum/ShelveType.ts",
+        "className": "ShelveType",
+        "componentUuid": "d2131w1y1xCTZl85kBVVdmb",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/SkillBox.ts",
+        "file": "game/modules/SkillBox.js",
+        "source": "game/source/game/SkillBox.ts",
+        "className": "SkillBox",
+        "componentUuid": "91afeFPhJ5NMIErfu4XaCg6",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/SkillMgr.ts",
+        "file": "game/modules/SkillMgr.js",
+        "source": "game/source/manager/SkillMgr.ts",
+        "className": "SkillMgr",
+        "componentUuid": "504d35+dRRDg7MeOuS5p6nZ",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/SkillType.ts",
+        "file": "game/modules/SkillType.js",
+        "source": "game/source/enum/SkillType.ts",
+        "className": "SkillType",
+        "componentUuid": "33fdaV78DhHR7dAPW9O4uUX",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/SmallShelve.ts",
+        "file": "game/modules/SmallShelve.js",
+        "source": "game/source/game/SmallShelve.ts",
+        "className": "SmallShelve",
+        "componentUuid": "92a17HsV4RFPph7yMxO3f4E",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/Stage.ts",
+        "file": "game/modules/Stage.js",
+        "source": "game/source/game/Stage.ts",
+        "className": "Stage",
+        "componentUuid": "c58abNYUNtGTaELPAn63nuw",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/Switcher.ts",
+        "file": "game/modules/Switcher.js",
+        "source": "game/source/uiExtend/Switcher.ts",
+        "className": "Switcher",
+        "componentUuid": "4772djXcEtGA6kLkEpQOZ0P",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/TimeItem.ts",
+        "file": "game/modules/TimeItem.js",
+        "source": "game/source/uiItem/TimeItem.ts",
+        "className": "TimeItem",
+        "componentUuid": "593ddSYq4ZHBoj/JdZW6MVk",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/TimeMgr.ts",
+        "file": "game/modules/TimeMgr.js",
+        "source": "game/source/manager/TimeMgr.ts",
+        "className": "TimeMgr",
+        "componentUuid": "9a36f5tW91Gnp7BUUKYgzAc",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/TimeUtil.ts",
+        "file": "game/modules/TimeUtil.js",
+        "source": "game/source/util/TimeUtil.ts",
+        "className": "TimeUtil",
+        "componentUuid": "07102ahwgBFAZu9HS4Vb7oI",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/ToggleExtend.ts",
+        "file": "game/modules/ToggleExtend.js",
+        "source": "game/source/uiExtend/ToggleExtend.ts",
+        "className": "ToggleExtend",
+        "componentUuid": "659835HTWVKuJmTmyMhYpAf",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/TransMgr.ts",
+        "file": "game/modules/TransMgr.js",
+        "source": "game/source/manager/TransMgr.ts",
+        "className": "TransMgr",
+        "componentUuid": "88497k+5f9KULRgNBBQ+4rG",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/UI.ts",
+        "file": "game/modules/UI.js",
+        "source": "game/source/enum/UI.ts",
+        "className": "UI",
+        "componentUuid": "c8a08FNqdVHerPY3SIR/1mx",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/UIBase.ts",
+        "file": "game/modules/UIBase.js",
+        "source": "game/source/scriptBase/UIBase.ts",
+        "className": "UIBase",
+        "componentUuid": "111f5/XxgFNRZIz42m+GGGf",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/UIGame.ts",
+        "file": "game/modules/UIGame.js",
+        "source": "game/source/ui/UIGame.ts",
+        "className": "UIGame",
+        "componentUuid": "5a290LFtFJJ5ZYlc/D14Koe",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/UIGetReward.ts",
+        "file": "game/modules/UIGetReward.js",
+        "source": "game/source/ui/UIGetReward.ts",
+        "className": "UIGetReward",
+        "componentUuid": "3dacejXH+FCKJvYNd+LzdQ0",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/UIGetSkill.ts",
+        "file": "game/modules/UIGetSkill.js",
+        "source": "game/source/ui/UIGetSkill.ts",
+        "className": "UIGetSkill",
+        "componentUuid": "333753Gd1FCyY4QcMBJbrLh",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/UILoading.ts",
+        "file": "game/modules/UILoading.js",
+        "source": "game/source/ui/UILoading.ts",
+        "className": "UILoading",
+        "componentUuid": "463adtvr1NIE7o+HgOS2qHr",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/UILoginReward.ts",
+        "file": "game/modules/UILoginReward.js",
+        "source": "game/source/ui/UILoginReward.ts",
+        "className": "UILoginReward",
+        "componentUuid": "097caW3VFlD54SnGMMx5aKh",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/UILuckySpin.ts",
+        "file": "game/modules/UILuckySpin.js",
+        "source": "game/source/ui/UILuckySpin.ts",
+        "className": "UILuckySpin",
+        "componentUuid": "e07d7Xty35CRJ9f9kca17D7",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/UIMain.ts",
+        "file": "game/modules/UIMain.js",
+        "source": "game/source/ui/UIMain.ts",
+        "className": "UIMain",
+        "componentUuid": "42a4bWaBc5LXqIzmJWG7ZBL",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/UIMgr.ts",
+        "file": "game/modules/UIMgr.js",
+        "source": "game/source/manager/UIMgr.ts",
+        "className": "UIMgr",
+        "componentUuid": "2c522MGUX1PWKPa7gjqU4Ab",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/UIPassReward.ts",
+        "file": "game/modules/UIPassReward.js",
+        "source": "game/source/ui/UIPassReward.ts",
+        "className": "UIPassReward",
+        "componentUuid": "a4299iX6cZCU5/ndRDbdW7L",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/UIPause.ts",
+        "file": "game/modules/UIPause.js",
+        "source": "game/source/ui/UIPause.ts",
+        "className": "UIPause",
+        "componentUuid": "c45adto9B5CUrySVMJAHfZl",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/UIRecovery.ts",
+        "file": "game/modules/UIRecovery.js",
+        "source": "game/source/ui/UIRecovery.ts",
+        "className": "UIRecovery",
+        "componentUuid": "4121fz7NshJL6r1eiDKgdIv",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/UISetting.ts",
+        "file": "game/modules/UISetting.js",
+        "source": "game/source/ui/UISetting.ts",
+        "className": "UISetting",
+        "componentUuid": "1688935OTdLTa7kX+us2P+o",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/UIStageTip.ts",
+        "file": "game/modules/UIStageTip.js",
+        "source": "game/source/ui/UIStageTip.ts",
+        "className": "UIStageTip",
+        "componentUuid": "20f65pXklxMXLCKLZwpj4Q3",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/UITimeOut.ts",
+        "file": "game/modules/UITimeOut.js",
+        "source": "game/source/ui/UITimeOut.ts",
+        "className": "UITimeOut",
+        "componentUuid": "519a2XuJHhPCIqfzNnvXoyr",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/UIToast.ts",
+        "file": "game/modules/UIToast.js",
+        "source": "game/source/ui/UIToast.ts",
+        "className": "UIToast",
+        "componentUuid": "77689t//+dLirYhKMrlJsQa",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/UIType.ts",
+        "file": "game/modules/UIType.js",
+        "source": "game/source/enum/UIType.ts",
+        "className": "UIType",
+        "componentUuid": "5e880vRZzdPbr6TDMq95Hni",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/UIWin.ts",
+        "file": "game/modules/UIWin.js",
+        "source": "game/source/ui/UIWin.ts",
+        "className": "UIWin",
+        "componentUuid": "53080JFSltPuag+WxVvfmJN",
+        "bundle": "",
+        "readability": "source",
+        "notes": ""
+    },
+    {
+        "id": "chunks:///_virtual/WebLayout.js",
+        "file": "game/modules/WebLayout.js",
+        "source": "",
+        "className": "WebLayout",
+        "componentUuid": "",
+        "bundle": "",
+        "readability": "generated",
+        "notes": "Web 适配模块；无原始 TS 对应文件"
+    }
+]

@@ -1,0 +1,4 @@
+node_modules/
+cocos-source.json
+.DS_Store
+*.log

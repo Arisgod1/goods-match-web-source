@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "creator": {
+    "version": "3.8.3",
+    "appPath": "/Applications/Cocos/Creator/3.8.3/CocosCreator.app"
+  },
+  "sourceProject": {
+    "path": "/absolute/path/to/货柜消除大师/code"
+  },
+  "engine": {
+    "version": "3.8.3",
+    "sourcePath": "/absolute/path/to/cocos-engine"
+  },
+  "referenceBuilds": {
+    "webMobile": "/absolute/path/to/code/build/web-mobile",
+    "webEditableSource": "/absolute/path/to/code/build/web-editable-source-20261021"
+  }
+}

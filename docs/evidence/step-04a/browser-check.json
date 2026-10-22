@@ -1,0 +1,559 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewport": {
+    "width": 531,
+    "height": 652,
+    "deviceScaleFactor": 2
+  },
+  "consoleMessages": [
+    {
+      "type": "warning",
+      "text": "[.WebGL-0x11c000c7e00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+      "location": {
+        "url": "http://127.0.0.1:8080/",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    },
+    {
+      "type": "warning",
+      "text": "[.WebGL-0x11c000c7e00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+      "location": {
+        "url": "http://127.0.0.1:8080/",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    },
+    {
+      "type": "warning",
+      "text": "[.WebGL-0x11c000c7e00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+      "location": {
+        "url": "http://127.0.0.1:8080/",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    },
+    {
+      "type": "warning",
+      "text": "[.WebGL-0x11c000c7e00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+      "location": {
+        "url": "http://127.0.0.1:8080/",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    }
+  ],
+  "consoleErrorCount": 0,
+  "pageErrors": [],
+  "failedRequests": [],
+  "httpErrors": [],
+  "resources": {
+    "total": 250,
+    "boot": [
+      "http://127.0.0.1:8080/boot.js"
+    ],
+    "engine": [
+      "http://127.0.0.1:8080/engine/polyfills.bundle.js",
+      "http://127.0.0.1:8080/engine/system.bundle.js",
+      "http://127.0.0.1:8080/engine/import-map.json",
+      "http://127.0.0.1:8080/engine/cc.js",
+      "http://127.0.0.1:8080/engine/meshopt_decoder.wasm-ebbcb6df.js",
+      "http://127.0.0.1:8080/engine/meshopt_decoder.wasm-43855155.js",
+      "http://127.0.0.1:8080/engine/assets/meshopt_decoder.wasm-12c0a404.wasm",
+      "http://127.0.0.1:8080/engine/chunks/bundle.js"
+    ],
+    "gameMain": [
+      "http://127.0.0.1:8080/game/main.js"
+    ],
+    "gameApplication": [
+      "http://127.0.0.1:8080/game/application.js"
+    ],
+    "gameSettings": [
+      "http://127.0.0.1:8080/game/settings.json"
+    ],
+    "businessBundle": [
+      "http://127.0.0.1:8080/assets/main/index.js"
+    ],
+    "dataConfig": [
+      "http://127.0.0.1:8080/data/config.json"
+    ],
+    "dataTables": [
+      "http://127.0.0.1:8080/data/tables/cfg_level.json",
+      "http://127.0.0.1:8080/data/tables/cfg_icon.json",
+      "http://127.0.0.1:8080/data/tables/cfg_passReward.json",
+      "http://127.0.0.1:8080/data/tables/CfgLoginReward.json",
+      "http://127.0.0.1:8080/data/tables/CfgLuckySpin.json",
+      "http://127.0.0.1:8080/data/tables/CfgCombo.json"
+    ],
+    "oldBusinessData": [],
+    "oldRootEntry": [],
+    "oldSrcSettings": [],
+    "oldCocos": [],
+    "oldSrc": []
+  },
+  "sceneInfo": {
+    "scene": "main",
+    "nodes": [
+      {
+        "name": "BtnStart",
+        "depth": 8,
+        "active": true,
+        "world": {
+          "x": 360,
+          "y": 530
+        }
+      },
+      {
+        "name": "BtnStart",
+        "depth": 8,
+        "active": true,
+        "world": {
+          "x": 1080,
+          "y": 530
+        }
+      },
+      {
+        "name": "BtnStart",
+        "depth": 8,
+        "active": true,
+        "world": {
+          "x": 1800,
+          "y": 530
+        }
+      },
+      {
+        "name": "BtnPassReward",
+        "depth": 6,
+        "active": true,
+        "world": {
+          "x": 104,
+          "y": 700
+        }
+      },
+      {
+        "name": "PassRewardItem",
+        "depth": 7,
+        "active": true,
+        "world": {
+          "x": 104,
+          "y": 630
+        }
+      },
+      {
+        "name": "UILoginReward",
+        "depth": 4,
+        "active": true,
+        "world": {
+          "x": 360,
+          "y": 800
+        }
+      },
+      {
+        "name": "BtnClose",
+        "depth": 5,
+        "active": true,
+        "world": {
+          "x": 560,
+          "y": 1010
+        }
+      }
+    ]
+  },
+  "before": {
+    "shelves": [
+      {
+        "wx": 360,
+        "wy": 1041,
+        "ids": [
+          13,
+          14,
+          14,
+          25
+        ],
+        "layer0": [
+          {
+            "slot": 0,
+            "id": 13
+          },
+          {
+            "slot": 1,
+            "id": 14
+          }
+        ]
+      },
+      {
+        "wx": 136,
+        "wy": 900,
+        "ids": [
+          28,
+          13,
+          25,
+          25,
+          28
+        ],
+        "layer0": [
+          {
+            "slot": 1,
+            "id": 28
+          },
+          {
+            "slot": 2,
+            "id": 13
+          }
+        ]
+      },
+      {
+        "wx": 360,
+        "wy": 900,
+        "ids": [
+          14
+        ],
+        "layer0": [
+          {
+            "slot": 2,
+            "id": 14
+          }
+        ]
+      },
+      {
+        "wx": 584,
+        "wy": 900,
+        "ids": [
+          13,
+          28
+        ],
+        "layer0": [
+          {
+            "slot": 0,
+            "id": 13
+          },
+          {
+            "slot": 1,
+            "id": 28
+          }
+        ]
+      }
+    ],
+    "goods": [
+      {
+        "id": 14,
+        "layer": 1,
+        "slot": 0,
+        "wx": 289,
+        "wy": 1056
+      },
+      {
+        "id": 25,
+        "layer": 1,
+        "slot": 1,
+        "wx": 360,
+        "wy": 1056
+      },
+      {
+        "id": 13,
+        "layer": 0,
+        "slot": 0,
+        "wx": 289,
+        "wy": 1041
+      },
+      {
+        "id": 14,
+        "layer": 0,
+        "slot": 1,
+        "wx": 360,
+        "wy": 1041
+      },
+      {
+        "id": 25,
+        "layer": 1,
+        "slot": 0,
+        "wx": 65,
+        "wy": 915
+      },
+      {
+        "id": 25,
+        "layer": 1,
+        "slot": 1,
+        "wx": 136,
+        "wy": 915
+      },
+      {
+        "id": 28,
+        "layer": 1,
+        "slot": 2,
+        "wx": 207,
+        "wy": 915
+      },
+      {
+        "id": 28,
+        "layer": 0,
+        "slot": 1,
+        "wx": 136,
+        "wy": 900
+      },
+      {
+        "id": 13,
+        "layer": 0,
+        "slot": 2,
+        "wx": 207,
+        "wy": 900
+      },
+      {
+        "id": 14,
+        "layer": 0,
+        "slot": 2,
+        "wx": 431,
+        "wy": 900
+      },
+      {
+        "id": 13,
+        "layer": 0,
+        "slot": 0,
+        "wx": 513,
+        "wy": 900
+      },
+      {
+        "id": 28,
+        "layer": 0,
+        "slot": 1,
+        "wx": 584,
+        "wy": 900
+      }
+    ]
+  },
+  "plan": [],
+  "executed": [],
+  "fallback": {
+    "reason": "same-id",
+    "sourceShelf": {
+      "wx": 136,
+      "wy": 900,
+      "ids": [
+        28,
+        13,
+        25,
+        25,
+        28
+      ],
+      "layer0": [
+        {
+          "slot": 1,
+          "id": 28
+        },
+        {
+          "slot": 2,
+          "id": 13
+        }
+      ]
+    },
+    "sourceEntry": {
+      "slot": 2,
+      "id": 13
+    },
+    "targetShelf": {
+      "wx": 360,
+      "wy": 1041,
+      "ids": [
+        13,
+        14,
+        14,
+        25
+      ],
+      "layer0": [
+        {
+          "slot": 0,
+          "id": 13
+        },
+        {
+          "slot": 1,
+          "id": 14
+        }
+      ]
+    },
+    "goods": {
+      "id": 13,
+      "layer": 0,
+      "slot": 2,
+      "wx": 207,
+      "wy": 900
+    },
+    "source": {
+      "x": 203.1525,
+      "y": 285.25
+    },
+    "destination": {
+      "x": 265.5,
+      "y": 260.39250000000004
+    }
+  },
+  "after": {
+    "shelves": [
+      {
+        "wx": 360,
+        "wy": 1041,
+        "ids": [
+          13,
+          14,
+          13,
+          14,
+          25
+        ],
+        "layer0": [
+          {
+            "slot": 0,
+            "id": 13
+          },
+          {
+            "slot": 1,
+            "id": 14
+          },
+          {
+            "slot": 2,
+            "id": 13
+          }
+        ]
+      },
+      {
+        "wx": 136,
+        "wy": 900,
+        "ids": [
+          28,
+          25,
+          25,
+          28
+        ],
+        "layer0": [
+          {
+            "slot": 1,
+            "id": 28
+          }
+        ]
+      },
+      {
+        "wx": 360,
+        "wy": 900,
+        "ids": [
+          14
+        ],
+        "layer0": [
+          {
+            "slot": 2,
+            "id": 14
+          }
+        ]
+      },
+      {
+        "wx": 584,
+        "wy": 900,
+        "ids": [
+          13,
+          28
+        ],
+        "layer0": [
+          {
+            "slot": 0,
+            "id": 13
+          },
+          {
+            "slot": 1,
+            "id": 28
+          }
+        ]
+      }
+    ],
+    "goods": [
+      {
+        "id": 14,
+        "layer": 1,
+        "slot": 0,
+        "wx": 289,
+        "wy": 1056
+      },
+      {
+        "id": 25,
+        "layer": 1,
+        "slot": 1,
+        "wx": 360,
+        "wy": 1056
+      },
+      {
+        "id": 13,
+        "layer": 0,
+        "slot": 0,
+        "wx": 289,
+        "wy": 1041
+      },
+      {
+        "id": 14,
+        "layer": 0,
+        "slot": 1,
+        "wx": 360,
+        "wy": 1041
+      },
+      {
+        "id": 13,
+        "layer": 0,
+        "slot": 2,
+        "wx": 431,
+        "wy": 1041
+      },
+      {
+        "id": 25,
+        "layer": 1,
+        "slot": 0,
+        "wx": 65,
+        "wy": 915
+      },
+      {
+        "id": 25,
+        "layer": 1,
+        "slot": 1,
+        "wx": 136,
+        "wy": 915
+      },
+      {
+        "id": 28,
+        "layer": 1,
+        "slot": 2,
+        "wx": 207,
+        "wy": 915
+      },
+      {
+        "id": 28,
+        "layer": 0,
+        "slot": 1,
+        "wx": 136,
+        "wy": 900
+      },
+      {
+        "id": 14,
+        "layer": 0,
+        "slot": 2,
+        "wx": 431,
+        "wy": 900
+      },
+      {
+        "id": 13,
+        "layer": 0,
+        "slot": 0,
+        "wx": 513,
+        "wy": 900
+      },
+      {
+        "id": 28,
+        "layer": 0,
+        "slot": 1,
+        "wx": 584,
+        "wy": 900
+      }
+    ]
+  }
+}
