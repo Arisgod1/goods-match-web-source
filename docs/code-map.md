@@ -17,6 +17,8 @@
 
 > 运行 JS 目前仍是 Babel 编译产物：非压缩、公开名称保留，但部分局部变量为编译器短名。 `game/source/` 的 TypeScript 是模型训练和二次创作的权威可读源码； 运行时 JS 的逐行可读性缺口在 Step 6 记录并逐步改善。
 
+`readability` 语义：`source` 表示有权威 TS 源可追溯；`compiled` 表示没有独立可读源、只能保留编译产物；`generated` 表示 Web/运行时生成模块。当前 92 个 `source` 模块的运行 JS 仍是 Babel 产物，`source` 不等于逐行手写可读。
+
 ## 核心模块
 
 | 模块 | 职责 |

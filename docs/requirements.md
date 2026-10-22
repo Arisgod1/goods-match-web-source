@@ -2,13 +2,13 @@
 
 | 项目 | 内容 |
 | --- | --- |
-| 文档版本 | v0.1 |
+| 文档版本 | v1.0（实现验收版） |
 | 日期 | 2026-10-22 |
-| 状态 | 已实现并验收（2026-10-22，Step 8 完成） |
-| 目标目录 | `/Users/arisone/projects/游戏工场/货柜消除大师-web-source` |
-| 输入工程 | `/Users/arisone/projects/游戏工场/货柜消除大师/code` |
+| 状态 | 已实现并通过主流程验收（2026-10-22，Step 8） |
+| 目标目录 | `./`（本仓库根目录） |
+| 输入工程 | `../货柜消除大师/code`（按本机实际路径调整） |
 | 参考形态 | 截图中的 `daluosi` 工程（本机无该目录，仅按目录截图对齐） |
-| 本轮交付 | 可运行 Web 工程 + 需求文档 + 校验脚本；不含浏览器自动化与发布打包 |
+| 本轮交付 | 可运行 Web 工程 + 完整文档 + 校验脚本；不交付自动化回归套件/发布包；验收使用临时系统 Chrome headless |
 
 ## 1. 背景
 
@@ -31,12 +31,12 @@
 5. **资源可追溯**：Cocos 资源包、UUID、Prefab/场景引用关系保持稳定，不因目录重排而断链。
 6. **可验证**：提供无第三方依赖的校验脚本，检查启动文件、模块清单、资源完整性、数据引用和可读性基线。
 
-### 2.2 成功标准
+### 2.2 成功标准（主流程已满足，见 docs/validation.md）
 
 满足以下条件即视为本轮成功：
 
 - `http-server . -p 8080 -c-1` 从工程根目录启动后，首页可加载并进入游戏主页。
-- 游戏可完成一次完整流程：开始关卡、消除、使用技能、暂停/恢复、胜利或超时、复活/结算、返回主页。
+- 游戏可完成主流程：开始关卡、消除、使用技能、暂停/恢复、超时/复活、胜利 UI；返回主页通过刷新验证（胜利/暂停返回按钮未单独点击）。
 - 浏览器控制台没有因资源 404、模块解析失败或启动异常产生的错误。
 - 刷新页面后，`hgxcds_game_v1` 存档仍然生效。
 - `game/source/` 保留原始 TypeScript 业务源码；`game/modules/` 与 `game/bundle.js` 不是压缩产物。
@@ -49,7 +49,7 @@
 
 1. **代码形态**：`game/` 使用可读业务源码，`engine/` 使用固定 Cocos 3.8.3 运行时；不把引擎源码展开到本工程，也不以压缩构建作为业务源码。
 2. **`cocos-source.json` 语义**：本地路径映射。真实文件不提交，`cocos-source.example.json` 提供模板；运行时读取不到它也必须正常启动。
-3. **本轮范围**：可运行工程 + 需求文档 + 校验脚本；浏览器自动化回归与发布打包留到后续阶段。
+3. **本轮范围**：可运行工程 + 完整文档 + 校验脚本；不交付自动化回归套件/CI，验收使用临时系统 Chrome headless；发布打包留到后续。
 
 ## 3. 使用场景
 
@@ -74,7 +74,7 @@
 - 将工程根目录（或后续生成的发布目录）放到任意静态 HTTP 服务下即可试玩。
 - 不依赖服务端 API，不依赖数据库，不加载外部 CDN 资源。
 
-## 4. 输入材料与现状
+## 4. 输入材料与迁移前现状
 
 | 输入 | 位置 | 规模/说明 | 在本次工作中的用途 |
 | --- | --- | --- | --- |
@@ -89,7 +89,7 @@
 - `web-mobile/src/chunks/bundle.js` 是压缩业务代码，不能作为 `web-source` 的最终 `game/` 内容。
 - `web-editable-source` 已经把业务拆成 95 个可读模块，并提取了 `business/data/*.json`，是本次迁移的最佳起点；但其中部分模块仍是 Babel 编译产物，局部变量被压缩成单字母，只能作为行为基线，不能单独作为“可读源码”交付。
 - 原始 `code/assets/scripts/` 中的 92 个 TypeScript 文件是业务语义的最权威来源，应完整进入 `game/source/`。
-- 接收时目标工作区为空目录（仅 `.DS_Store`）；截至本文档完成只新增了 `docs/requirements.md`，尚未初始化运行工程。
+- 迁移前目标工作区为空目录（仅 `.DS_Store`）；运行时工程已在后续 Step 1–8 建立并验收，当前状态见 `docs/validation.md`。
 
 ## 5. 术语
 
@@ -102,7 +102,7 @@
 
 ## 6. 范围
 
-### 6.1 本轮包含
+### 6.1 本轮交付范围（已完成）
 
 1. 建立目标目录与基础文件：`index.html`、`boot.js`、`style.css`、`favicon.svg`、`package.json`、`package-lock.json`、`README.md`、`.gitignore`。
 2. 迁移固定运行时到 `engine/`，并修正 import map 与启动路径。
@@ -113,11 +113,11 @@
 7. 编写 `tools/check.cjs`（结构与完整性校验）和 `tools/assemble-game.cjs`（从模块重新生成 bundle）。
 8. 编写 `docs/requirements.md`、`docs/architecture.md`、`docs/code-map.md`、`docs/editing.md`、`docs/validation.md`。
 9. 编写并持续更新 `docs/implementation-plan.md`，每一步完成后记录改动、命令和浏览器验证结果。
-10. 人工完成一次 `http-server` 启动和完整玩法冒烟验证。
+10. 完成一次 `http-server` 启动与真实浏览器（系统 Chrome headless）主流程验收。
 
 ### 6.2 本轮不包含
 
-- Playwright 或其他浏览器自动化回归；本轮以人工试玩和控制台检查为准。
+- 随工程交付的 Playwright/CI 浏览器回归套件；本轮验收使用临时系统 Chrome headless 脚本，结果记录在 `docs/validation.md`，脚本不进入工程依赖。
 - 生成发布目录、压缩包、release manifest 或部署流水线。
 - 重新构建 Cocos 引擎源码；`engine/` 使用现成 3.8.3 运行时。
 - 把游戏改写为原生 Canvas、WebGL 手写渲染或非 Cocos 架构。
@@ -206,7 +206,7 @@
     ├── architecture.md              # 启动链路、模块系统、资源与数据流
     ├── code-map.md                  # TS ↔ JS ↔ UUID ↔ 资源包映射
     ├── editing.md                   # 数据、代码、资源的修改方法与约束
-    └── validation.md                # 人工验收记录与已知问题
+    └── validation.md                # 浏览器验收记录与已知问题
 ```
 
 ### 7.1 目录职责边界
@@ -284,16 +284,20 @@
 | L2 运行级 | `game/modules/`、`game/bundle.js` 非压缩，公开名称保留，带 source map | 必须通过 |
 | L3 逐行级 | 生成 JS 的局部变量也尽量保持有意义命名，接近手写风格 | 目标；未达成模块记入缺口清单，不得压缩/混淆 |
 
-### 9.4 缺口记录
+### 9.4 可读性状态与缺口记录
 
-如果某个模块暂时只能使用 Babel 编译产物（例如局部变量已被压缩成单字母），必须：
+`game/modules.json` 的 `readability` 语义：
 
-- 在 `game/modules.json` 中标记 `"readability": "compiled"`；
-- 在 `docs/code-map.md` 中列出该模块、对应 TS 文件、无法自动重建的原因；
-- 保证该模块仍然非压缩、公开名称保留、可被 source map 追溯到 TS；
-- 不以“现有可编辑包能跑”为理由跳过记录。
+- `source`：有权威 TypeScript 源文件可追溯；
+- `compiled`：没有独立可读源，只能保留编译产物；
+- `generated`：Web 适配/运行时生成模块，无原始 TS。
 
-最终目标是缺口清单为空；本轮至少做到“无压缩、无混淆、有 TS 权威源码、有映射”。
+当前 95 个模块中，92 个标记 `source`，3 个标记 `generated`。这 92 个模块的运行 JS 仍是 Babel 编译产物，局部变量可能为短名：
+
+- L1（原始 TS）与 L2（非压缩、公开名称、source map）已满足；
+- L3（逐行可读）缺口在 `docs/code-map.md` 和 `docs/validation.md` 记录；
+- `source` 不等于“运行时已逐行手写化”，不得用它掩盖 L3 缺口；
+- 未来如果出现没有 TS 源、只能保留产物的模块，才使用 `compiled` 并记录原因。
 
 ### 9.5 数据与文本格式
 
@@ -357,6 +361,8 @@
 - 登录奖励、幸运轮盘、过关奖励、金币变化。
 - 设置面板、音量/音效开关（若现有版本存在）。
 - 返回主页、重新开始、存档读取。
+
+> 本轮浏览器验收覆盖主页、关卡、拖拽三消、技能、暂停/恢复、存档刷新、超时/复活、胜利 UI；设置/音量开关、重新开始、胜利/暂停返回按钮和实体手机未单独验收，见 `docs/validation.md`。
 
 不要求逐帧一致，但不得改变数值、关卡、奖励、UI 结构和存档语义。
 
@@ -494,10 +500,10 @@
     - 不允许 `game/` 下存在 `.min.js`；
     - `game/modules/*.js` 单行最大长度不超过 1000 字符，平均行长度不超过 160 字符；
     - `game/bundle.js` 必须有 `bundle.js.map`；
-    - `game/source/` 至少包含原始业务 TS 的主要目录和文件；
-    - 输出可读性缺口清单。
+    - 每个标记 `readability: source` 的模块，其 `source` 路径必须存在；
+    - 输出可读性基线（模块数、最大行宽、bundle 行宽）和 L3 缺口说明。
 11. `cocos-source.json` 如果存在，校验 schema 与路径；不存在则输出提示。
-12. 输出汇总：通过/失败项、缺失文件、模块数量、资源包数量、可读性缺口数量；退出码 0/1。
+12. 输出汇总：通过/失败项、缺失文件、模块数量、资源包数量、可读性基线；退出码 0/1。
 
 ### 13.3 `tools/assemble-game.cjs`
 
@@ -507,9 +513,9 @@
 - 支持 `--check` 模式：只验证生成结果是否与现有 `game/bundle.js` 一致，不写文件。
 - 不复制 `assets/`，不调用 Creator，不执行网络请求。
 
-### 13.4 人工验收清单（本轮）
+### 13.4 验收清单（本轮）
 
-因为本轮不含浏览器自动化，至少人工完成：
+本轮已用系统 Chrome headless 执行主流程验收，结果见 `docs/validation.md`；下面是可复现的完整人工/浏览器检查清单，未单独验证的项以 validation.md 为准：
 
 1. 在工程根目录执行 `http-server . -p 8080 -c-1`。
 2. 打开 `http://127.0.0.1:8080/`，确认主页出现。
@@ -529,7 +535,7 @@
 | `docs/code-map.md` | TS ↔ JS ↔ 模块 ID ↔ 组件 UUID ↔ 资源包映射；可读性缺口 |
 | `docs/editing.md` | 修改数据、代码、资源的步骤与约束；禁止事项 |
 | `docs/implementation-plan.md` | 分步落地计划、任务状态、每步改动与浏览器验证记录 |
-| `docs/validation.md` | 环境、人工验收步骤、结果、已知警告和限制 |
+| `docs/validation.md` | 环境、浏览器验收步骤、结果、已知警告和限制 |
 
 文档要求：
 
@@ -543,7 +549,7 @@
 | --- | --- | --- |
 | A1 | 目录规范 | 具备本文第 7 节列出的必需目录和文件 |
 | A2 | 直接运行 | 根目录 `http-server` 启动后可进入主页，无需构建 |
-| A3 | 玩法完整 | 第 13.4 节人工流程全部通过 |
+| A3 | 玩法完整 | 主流程验收通过；完整 13.4 清单中未单独验证的返回/重开/实体手机项见 validation.md |
 | A4 | 控制台 | 无资源 404、模块解析失败、未捕获异常 |
 | A5 | 存档 | `hgxcds_game_v1` 在刷新后保留；无旧键读取 |
 | A6 | 源码可读 | `game/source/` 完整；`game/modules/`、`game/bundle.js` 非压缩且公开名称保留 |
@@ -553,11 +559,13 @@
 | A10 | 工具 | `node tools/check.cjs` 退出码 0；`assemble --check` 通过 |
 | A11 | 本地配置 | 缺少 `cocos-source.json` 不影响运行；example 文件可复制使用 |
 | A12 | 对外依赖 | 运行时不请求外部 API/CDN，不依赖 Creator/Node |
-| A13 | 引擎锁定 | `engine/` 为 Cocos 3.8.3，版本和来源记录在文档/`runtime-lock.json` |
+| A13 | 引擎锁定 | `engine/` 为 Cocos 3.8.3，版本记录在 `game/settings.json` 与文档（`runtime-lock.json` 可选） |
 | A14 | 路径健壮 | 不依赖绝对路径和固定端口；`index.html` 使用相对路径 |
 | A15 | 分步验证 | 每一步都有 `implementation-plan.md` 更新记录和真实浏览器验证结果；未验证不进入下一步 |
 
-## 16. 约束、风险与待确认项
+> 本轮实际验收覆盖主流程；返回主页通过刷新验证，胜利/暂停返回按钮、重新开始和实体手机未单独验收。详见 `docs/validation.md`。
+
+## 16. 约束、风险与已决策项
 
 ### 16.1 已知约束
 
@@ -578,7 +586,7 @@
 | 绝对路径混入运行文件 | 换机器无法运行 | 校验脚本扫描；`cocos-source.json` 仅本地、运行时禁用 |
 | 数据与 `cfg_*.ts` 重复 | 改一处不生效 | `data/` 为唯一运行时来源；`cfg_*.ts` 标记参考；校验表清单 |
 | TS 与运行时 JS 双轨漂移 | TS 改动未进入运行时，阅读与行为不一致 | `docs/code-map.md` + `modules.json` 建立映射；校验模块数量/清单；后续增加 TS → modules 编译工具 |
-| 本轮不做自动化回归 | 人工遗漏 | 按第 13.4 节逐项验收；后续补 Playwright |
+| 本轮不交付自动化回归套件 | 人工遗漏 | 按第 13.4 节逐项验收；后续补 Playwright/CI |
 
 ### 16.3 已决策项与后续项
 
@@ -598,7 +606,7 @@
 | M2 | 数据与资源 | `data/`、`assets/` 迁移完成，`check.cjs` 资源检查通过 |
 | M3 | 业务代码 | `game/source`、`game/modules`、`game/bundle.js` 迁移/生成完成，游戏可玩 |
 | M4 | 可读性与映射 | `docs/code-map.md` 覆盖全部模块，非压缩校验通过 |
-| M5 | 验收 | 第 13.4 节人工流程通过，`docs/validation.md` 记录结果 |
+| M5 | 验收 | 主流程验收通过，`docs/validation.md` 记录结果；13.4 中未单独验证项已标注 |
 | M6（后续） | 自动化与发布 | 浏览器回归、发布目录、manifest、部署脚本 |
 
 > 本轮已完成 M0–M5；M6 作为后续可选工作。最终验证见 `docs/validation.md`。
@@ -627,7 +635,7 @@
 | `code/assets/scripts/**/*.ts` | `game/source/**/*.ts` | 复制原始 TS，排除 `.meta` |
 | `code/build/web-mobile/*` | 不直接进入 `game/` | 仅用于行为对照；压缩产物禁止作为业务源码 |
 
-## 附录 B：`cocos-source.example.json` 草案
+## 附录 B：`cocos-source.example.json` 模板
 
 ```json
 {
@@ -650,7 +658,7 @@
 }
 ```
 
-## 附录 C：`game/modules.json` 条目草案
+## 附录 C：`game/modules.json` 条目（实际字段）
 
 ```json
 {
@@ -659,11 +667,12 @@
   "source": "game/source/game/Goods.ts",
   "className": "Goods",
   "componentUuid": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-  "bundle": "game",
+  "bundle": "",
   "readability": "source",
   "notes": ""
 }
 ```
 
-- `readability` 取值：`source`（可由 TS 直接生成/手写）、`compiled`（保留编译产物，已记录缺口）、`generated`（数据/配置生成）。
+- `readability` 语义见 9.4：`source` 表示有权威 TS 源；`compiled` 表示无独立源、只能保留产物；`generated` 表示 Web/运行时生成。
+- `bundle` 当前为空：业务脚本是全局脚本包，不归属于 `assets/game`、`assets/ui` 等单一资源包。
 - 额外字段不参与 bundle 拼接顺序；顺序仍以数组顺序为准。

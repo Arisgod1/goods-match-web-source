@@ -78,7 +78,7 @@
 | --- | --- | --- |
 | A1 | 目录规范 | 通过；具备 `assets/`、`boot.js`、`cocos-source*.json`、`data/`、`docs/`、`tools/`、`engine/`、`game/` |
 | A2 | 直接运行 | 通过；根目录 `http-server` 可进入主页，无需构建 |
-| A3 | 玩法完整 | 通过；主页、关卡、拖拽、三消、技能、暂停、超时/复活、胜利 UI、返回主页路径均验证 |
+| A3 | 玩法完整 | 通过；主页、关卡、拖拽、三消、技能、暂停、超时/复活、胜利 UI 已验证；返回主页通过刷新验证，未单独点击胜利/暂停的返回按钮 |
 | A4 | 控制台 | 通过；最终 Chrome 运行 0 error / 0 pageerror |
 | A5 | 存档 | 通过；`hgxcds_game_v1` 刷新后保留 |
 | A6 | 源码可读 | 通过 L1/L2；92 个 TS 源、95 个非压缩模块、93 个 UUID 保留；L3 短局部变量缺口已记录 |
@@ -110,7 +110,7 @@
 
 1. **L3 可读性缺口**：92 个有 TS 映射的模块仍是 Babel 编译产物，局部变量为编译器短名；它们不是压缩/混淆产物。`game/source/` 的 TypeScript 是权威可读源码，运行时 JS 带 source map。详见 `docs/code-map.md`。
 2. **TS 不自动编译**：本轮没有 TS → `game/modules` 编译工具；修改 `game/source/**/*.ts` 不会自动改变运行时，需要手工同步或后续补工具。
-3. **超时/胜利为状态触发**：UI/存档链路真实验证，但没有等待自然 3 分半超时或完整自然通关。
+3. **超时/胜利为状态触发**：UI/存档链路真实验证，但没有等待自然 3 分半超时或完整自然通关；未单独点击胜利/暂停的返回按钮，返回主页通过刷新验证。
 4. **浏览器覆盖**：使用桌面 Chrome headless，不是实体手机验收；720 × 1600 设计分辨率和页面适配已验证。WebGL `ReadPixels`、AudioContext 自动播放提示属于浏览器/引擎提示性 warning，不是失败。
 5. **主包兼容 shim**：Cocos 运行时仍请求 `assets/main/index.js`，因此保留一个极小占位脚本；业务 bundle 唯一位置是 `game/bundle.js`。
 6. **存档绑定 origin**：换端口/域名/隐私模式会得到不同或不可用存档。
@@ -119,7 +119,7 @@
 ## 8. 复现命令
 
 ```sh
-cd /Users/arisone/projects/游戏工场/货柜消除大师-web-source
+cd <project-root>
 node tools/check.cjs
 node tools/assemble-game.cjs --check
 http-server . -p 8080 -c-1

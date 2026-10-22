@@ -76,7 +76,7 @@ index.html
   - `file`：运行模块路径；
   - `source`：原始 TS 路径；
   - `className`、`componentUuid`：组件名与 `_RF.push` UUID；
-  - `readability`：`source` / `compiled` / `generated`；
+  - `readability`：`source`（有权威 TS 源）、`compiled`（无独立源，保留产物）、`generated`（Web/运行时生成）；
   - `notes`：数据适配、Web 适配等说明。
 - 95 个模块中：
   - 92 个有原始 TS 映射；

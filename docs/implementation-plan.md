@@ -6,8 +6,8 @@
 | 日期 | 2026-10-22 |
 | 状态 | Step 0–8 完成；交付完成 |
 | 关联文档 | [需求文档](requirements.md) |
-| 目标目录 | `/Users/arisone/projects/游戏工场/货柜消除大师-web-source` |
-| 输入工程 | `/Users/arisone/projects/游戏工场/货柜消除大师/code` |
+| 目标目录 | `./`（本仓库根目录） |
+| 输入工程 | `../货柜消除大师/code`（按本机实际路径调整） |
 
 本文档是落地过程的**唯一任务进度台账**。每一步开始、完成或阻塞时都必须更新对应记录；未完成浏览器验证的步骤不得标记为“已完成”，也不得进入下一步。
 
@@ -18,7 +18,7 @@
 3. **每步结束必须真实打开浏览器验证**：用 `http-server` 启动工程，实际访问页面；不能只看脚本输出或静态文件结构。
 4. **不以测试为导向写代码**：实现按真实行为和可读性组织，不为测试引入额外接口、mock、依赖注入或测试专用分支；`tools/check.cjs` 只作为结构和完整性护栏。
 5. **行为等价优先**：迁移阶段除路径适配、启动适配和可读性整理外，不改玩法、数值、UI 结构和存档语义。
-6. **小步提交/可回退**：建议在 Step 1 初始化本地 Git（不推送），每步验证通过后提交；若不使用 Git，则在每步前保留上一版目录副本。
+6. **小步提交/可回退**：实际在每个高风险步骤前保留备份（Step 4B 前使用 tar），交付验收后建立 Git 基线提交；后续修改可按步骤提交。
 7. **保护输入工程**：`code/` 只读使用，不修改、不清理、不覆盖其构建产物。
 
 ## 2. 环境与常用命令
@@ -232,24 +232,24 @@ business/
 - `business/modules/*.js` → `game/modules/*.js`
 - `business/modules.json` → `game/modules.json`
 - `business/prerequisite.js` → `game/prerequisite.js`
-- 生成 `game/bundle.js`（先以 `assets/main/index.js` 为基线，后续由 `assemble-game.cjs` 重建）
+- 生成 `game/bundle.js`（先以 `assets/main/index.js` 为基线，后续由 `assemble-game.cjs` 重建，并加 SystemJS 外层包装）
 - 生成 `game/bundle.js.map`
 - `game/settings.json` 的 `scriptPackages` 改为：
   - `"../engine/chunks/bundle.js"`
   - `"../game/bundle.js"`
-- `assets/main/config.json` 的 `hasPreloadScript` 改为 `false`
-- 删除或移走 `assets/main/index.js`。如果实测 Cocos 主包仍要求预加载脚本，则只保留一行生成的转接代码导入 `../../game/bundle.js`，不得复制业务代码。
+- `assets/main/config.json` 的 `hasPreloadScript` 保持 `true`
+- `assets/main/index.js` 保留为极小兼容占位脚本：Cocos 运行时仍会请求它；它不注册业务模块、不复制 bundle。
 - 更新 `game/modules.json` 中 `file` 路径为 `game/modules/...`。
 
 **浏览器验证**：
 
 - 预期：游戏行为不变；Network 中业务包只从 `game/bundle.js` 加载；`assets/main/index.js` 不再承载完整业务代码。
 - 重点检查：组件脚本是否正常注册、Prefab 是否正常挂载、关卡是否能进入。
-- 如果主包预加载脚本顺序有问题，记录现象并采用转接方案，仍以浏览器实测为准。
+- 实测确认：Cocos 运行时始终请求 `assets/main/index.js`，`hasPreloadScript:false` 不能阻止；因此使用极小占位脚本，业务包仍只从 `game/bundle.js` 加载。
 
 **已知问题复核**：
 
-- Step 1 基线存在 12 次 Cocos Error 3804（`getComponent: Type must be non-nil`）。Step 4B 迁移后必须复查：如果仍存在，记录触发模块/节点并尝试定位；如果暂时无法修复，保留现场并在 Step 8 作为已知问题记录，不得直接忽略。
+- Step 1 基线曾出现 12 次 Cocos Error 3804（`getComponent: Type must be non-nil`）；Step 4B 及后续系统 Chrome 运行未复现，最终见 `docs/validation.md`。
 
 **退出条件**：
 
@@ -413,10 +413,10 @@ business/
   - `docs/implementation-plan.md`
 - 执行命令：无（纯文档阶段）
 - 浏览器验证：N/A
-- 遗留问题：
-  - 待评审：`game/source` 是否保留 `config/cfg_*.ts` 作参考。
-  - 待评审：下一轮是否引入 TS → modules 编译工具。
-  - 待评审：Cocos 业务包加载方式（`scriptPackages` 直载 vs. main 包转接）需在 Step 4B 用浏览器实测决定。
+- 已决策（原遗留项）：
+  - `game/source/config/cfg_*.ts` 保留作参考；运行时数据以 `data/tables/` 为准。
+  - TS → modules 编译工具本轮未实现，作为后续可选工作。
+  - Cocos 业务包最终采用 `scriptPackages` + `game/bundle.js` 外层包装 + 主包兼容占位脚本，已在 Step 4B 实测。
 - 下一步：Step 1 导入可运行基线。
 
 ### Step 1：导入可运行基线
@@ -688,7 +688,9 @@ business/
 - 已知限制：
   - 92 个模块仍有 Babel 短局部变量名（L3 缺口）；TS 源是权威可读源码。
   - 超时/胜利通过 Stage 状态方法触发正常 UI 链路，未等待自然超时或完整自然通关。
+  - 未单独点击胜利/暂停的返回按钮；返回主页通过刷新验证。
   - 桌面 Chrome headless 验证，不是实体手机验收。
+  - Step 1 的 12 次 3804 未在 Step 2–8 的系统 Chrome 运行中复现。
   - `assets/main/index.js` 是 Cocos 主包兼容占位脚本，不含业务代码。
 - 最终状态：**交付完成**。工程根目录执行 `http-server` 即可运行；结构、数据、资源、源码映射、存档和主要玩法流程均已验证。
 
